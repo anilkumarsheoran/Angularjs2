@@ -9,19 +9,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
-        this.pagetitle = 'Anil ';
-        this.todo = [{ name: 'a' }, { name: 'b' }];
+var ProductsListComponent = (function () {
+    function ProductsListComponent() {
+        this.characters = 'abcfdsfdsfsf';
+        this.characters1 = [
+            { id: 1, name: "United States" },
+            { id: 2, name: "Australia" },
+            { id: 3, name: "Canada" },
+            { id: 4, name: "Brazil" },
+            { id: 5, name: "England" }
+        ];
     }
-    AppComponent = __decorate([
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Object)
+    ], ProductsListComponent.prototype, "todod", void 0);
+    ProductsListComponent = __decorate([
         core_1.Component({
-            selector: 'abc',
-            template: "<div>\n\t\t<ul><li *ngFor='let todod of todo' >{{todod.name}}<pm-products [todod]='todod'></pm-products></li></ul>\n\t{{pagetitle}}</div>"
+            selector: 'pm-products',
+            templateUrl: 'app/products/products-list.component.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], ProductsListComponent);
+    return ProductsListComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.ProductsListComponent = ProductsListComponent;
+//# sourceMappingURL=products-list.component.js.map

@@ -2,7 +2,9 @@ import {Component} from '@angular/core';
 
 @Component({
 	selector: 'abc',
-	template:'<div>{{pagetitle}}</div>'
+	template:`<div>
+		<ul><li *ngFor='let todod of todo' >{{todod.name}}<pm-products [todod]='todod'></pm-products></li></ul>
+	{{pagetitle}}</div>`
 
 
 })
@@ -11,5 +13,7 @@ import {Component} from '@angular/core';
 
 
 export class AppComponent{
-	pagetitle:string='Anil '
+	pagetitle:string='Anil ',
+	todo=[{name:'a'},{name:'b'}],
+
 }
